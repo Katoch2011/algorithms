@@ -15,13 +15,12 @@ public class Count {
 			c[i]=c[i]+c[i-1];
 		}
 		for(int i=(arr.length-1);i>=0;i--){
-		System.out.printf("\n%d,%d",arr[i],c[arr[i]]);
-			//result[c[arr[i]]]=arr[i];
+			result[c[arr[i]]]=arr[i];
 			c[arr[i]]=c[arr[i]]-1;
 		}
 		
-	//	for(int i=0;i<result.length;i++)
-	//		System.out.print(" "+result[i]);
+		for(int i=0;i<result.length;i++)
+			System.out.print(" "+result[i]);
 	}
 	
 	public int getMax(int[] array){
@@ -31,6 +30,6 @@ public class Count {
 				max=array[i];
 			}
 		}
-		return max;
+		return (max+1);
 	}
 }
